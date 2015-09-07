@@ -1,0 +1,25 @@
+URxvt.scrollBar: false
+
+URxvt.background: rgb:00/00/00
+URxvt.foreground: rgb:01/71/ac
+URxvt.colorIT: rgb:6d/a3/bf
+URxvt.colorBD: rgb:c5/d5/de
+URxvt.colorUL: rgb:4d/97/a1
+
+
+*color0: rgb:00/00/00
+*color1: rgb:a8/00/00
+*color2: rgb:00/a8/00
+*color3: rgb:a8/54/00
+*color4: rgb:00/00/a8
+*color5: rgb:a8/00/a8
+*color6: rgb:00/a8/a8
+*color7: rgb:42/42/42
+*color8: rgb:00/00/00
+*color9: rgb:f8/54/00
+*color10: rgb:50/fc/50
+*color11: rgb:f8/fc/50
+*color12: rgb:50/54/f8
+*color13: rgb:f8/54/f8
+*color14: rgb:50/fc/f8
+*color15: rgb:f8/fc/f8
