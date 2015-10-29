@@ -43,4 +43,4 @@ filetype plugin indent on "File type detection + filetype-specific tab behavior.
 color oceanblack256
 
 " Put backup files in a specific directory so they don't cause clutter:
-set backupdir=~/.backup//
+set backupdir=~/.vim/tmp,.
