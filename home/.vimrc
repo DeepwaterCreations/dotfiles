@@ -40,6 +40,9 @@ Plugin 'guicolorscheme.vim'
 " Tabbed buffers
 Plugin 'fholgado/minibufexpl.vim'
 
+" Fancy statusbar
+Plugin 'itchyny/lightline.vim'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
@@ -52,6 +55,10 @@ let g:miniBufExplCycleArround = 1
 "noremap <C-TAB>   :MBEbn<CR> I'd like to do this, but it turns out Ctrl-Tab
 "noremap <C-S-TAB> :MBEbp<CR> isn't a key combo Vim can distinguish.
 noremap <TAB> :MBEbn<CR>
+
+" Lightline Settings:
+" Hide the default Vim status, since Lightline makes it redundant. 
+set noshowmode
 
 " Other Keybindings:
 " Ctrl-hjkl navigates windows
