@@ -59,6 +59,8 @@ noremap <TAB> :MBEbn<CR>
 " Lightline Settings:
 " Hide the default Vim status, since Lightline makes it redundant. 
 set noshowmode
+" This will ensure the status line displays with only one window.
+set laststatus=2
 
 " Other Keybindings:
 " Ctrl-hjkl navigates windows
