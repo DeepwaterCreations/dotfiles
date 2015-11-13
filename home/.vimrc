@@ -69,6 +69,10 @@ set laststatus=2
 let g:lightline = {
 \	'component': {
 \		'readonly': '%{&readonly?"":""}',
+\		'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+\	},
+\	'component_visible_condition': {
+\		'fugitive': '(exists("*fugitive#head")&&""!=fugitive#head())'
 \	},
 \	'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
 \	'subseparator': {'left': "\ue0b1", 'right': "\ue0b3"} 
