@@ -61,6 +61,14 @@ noremap <TAB> :MBEbn<CR>
 set noshowmode
 " This will ensure the status line displays with only one window.
 set laststatus=2
+" Lightline general configuration
+let g:lightline = {
+\	'component': {
+\		'readonly': '%{&readonly?"":""}',
+\	},
+\	'separator': {'left': '', 'right': ''},
+\	'subseparator': {'left': '', 'right': ''} 
+\}
 
 " Other Keybindings:
 " Ctrl-hjkl navigates windows
