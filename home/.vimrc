@@ -43,6 +43,10 @@ Plugin 'fholgado/minibufexpl.vim'
 " Fancy statusbar
 Plugin 'itchyny/lightline.vim'
 
+" Git integration
+Plugin 'tpope/vim-fugitive'
+Plugin 'gitv'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
