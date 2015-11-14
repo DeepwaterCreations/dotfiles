@@ -55,6 +55,10 @@ Plugin 'vimwiki'
 call vundle#end() 
 filetype plugin indent on "File type detection + filetype-specific tab behavior. Re-enabling now that Vundle's done doing its thing.
 
+" GuiColorScheme Settings:
+runtime! plugin/guicolorscheme.vim
+GuiColorScheme oceandeep
+
 " MiniBufExpl Settings:
 " Wrap buffer movement
 let g:miniBufExplCycleArround = 1
@@ -87,8 +91,6 @@ noremap <C-h> <C-W>h
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-l> <C-W>l
-
-color oceanblack256
 
 " Put backup files in a specific directory so they don't cause clutter:
 set backupdir=~/.vim/tmp,.
