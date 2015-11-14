@@ -85,6 +85,10 @@ let g:lightline = {
 \	'subseparator': {'left': "\ue0b1", 'right': "\ue0b3"} 
 \}
 
+
+" Turn on omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
 " Other Keybindings:
 " Ctrl-hjkl navigates windows
 noremap <C-h> <C-W>h
