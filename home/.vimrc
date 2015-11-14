@@ -1,5 +1,5 @@
 set nocompatible
-filetype off "Vundle wants this.
+filetype off "Vundle wants this. It gets re-enabled below the vundle plugin block.
 
 set history=256	"256 lines of command line history
 set hidden		"Open multiple files without closing the old ones
@@ -50,7 +50,7 @@ Plugin 'gitv'
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
-filetype plugin indent on "File type detection + filetype-specific tab behavior.
+filetype plugin indent on "File type detection + filetype-specific tab behavior. Re-enabling now that Vundle's done doing its thing.
 
 " MiniBufExpl Settings:
 " Wrap buffer movement
