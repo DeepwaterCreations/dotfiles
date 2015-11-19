@@ -291,6 +291,7 @@ set ebind     = @mode_bind global,-insert
 #@cbind  \\wiki<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
 @cbind  !w<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
 @cbind  !gi<Google Image:>_         = uri http://www.google.com/search?tbm=isch&q=\@<encodeURIComponent(%r)>\@&tbs=imgo:1
+@cbind  !yt<YouTube:>_ = uri https://www.youtube.com/results?search_query=\@<encodeURIComponent(%r)>\@
 
 # Handy binds
 # Set function shortcut
