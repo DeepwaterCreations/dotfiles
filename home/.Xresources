@@ -6,6 +6,8 @@ URxvt.colorIT: rgb:6d/a3/bf
 URxvt.colorBD: rgb:c5/d5/de
 URxvt.colorUL: rgb:4d/97/a1
 
+URxvt.letterSpace: -1
+URxvt.font: xft:Sauce Code Powerline:size=10
 
 *color0: rgb:00/00/00
 *color1: rgb:a8/00/00
