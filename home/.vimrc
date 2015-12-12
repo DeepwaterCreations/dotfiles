@@ -65,7 +65,8 @@ let g:miniBufExplCycleArround = 1
 " Ctrl-Tab and Ctrl-Shift-Tab switch buffers:
 "noremap <C-TAB>   :MBEbn<CR> I'd like to do this, but it turns out Ctrl-Tab
 "noremap <C-S-TAB> :MBEbp<CR> isn't a key combo Vim can distinguish.
-noremap <TAB> :MBEbn<CR>
+noremap <C-N> :MBEbn<CR>
+noremap <C-P> :MBEbp<CR>
 
 " Lightline Settings:
 " Hide the default Vim status, since Lightline makes it redundant. 

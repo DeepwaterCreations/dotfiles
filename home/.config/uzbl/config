@@ -240,6 +240,8 @@ set ebind     = @mode_bind global,-insert
 @cbind  k            = scroll vertical -20
 @cbind  h            = scroll horizontal -20
 @cbind  l            = scroll horizontal 20
+@cbind  J            = scroll vertical 200
+@cbind  K            = scroll vertical -200
 @cbind  <Page_Up>    = scroll vertical -100%
 @cbind  <Page_Down>  = scroll vertical 100%
 @cbind  <Ctrl>f      = scroll vertical 100%
@@ -285,13 +287,14 @@ set ebind     = @mode_bind global,-insert
 
 # Web searching binds
 #@cbind  gg<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
-@cbind  ddg<DuckDuckGo:>_    = uri http://duckduckgo.com/?q=%s
+@cbind  ddg<DuckDuckGo:>_    = uri https://duckduckgo.com/?q=%s
 #@cbind  \\awiki<Archwiki:>_  = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  !arch<Archwiki:>_  = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  !arch<Archwiki:>_  = uri https://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
 #@cbind  \\wiki<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  !w<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  !gi<Google Image:>_         = uri http://www.google.com/search?tbm=isch&q=\@<encodeURIComponent(%r)>\@&tbs=imgo:1
+@cbind  !w<Wikipedia:>_  = uri https://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  !gi<Google Image:>_         = uri https://www.google.com/search?tbm=isch&q=\@<encodeURIComponent(%r)>\@&tbs=imgo:1
 @cbind  !yt<YouTube:>_ = uri https://www.youtube.com/results?search_query=\@<encodeURIComponent(%r)>\@
+@cbind  !gh<GitHub:>_   = uri https://github.com/search?q=\@<encodeURIComponent(%r)>\@
 
 # Handy binds
 # Set function shortcut
@@ -318,7 +321,7 @@ set ebind     = @mode_bind global,-insert
 @bind   <Ctrl>i  = @set_mode insert
 
 # Hard-bound bookmarks
-@cbind  gh  = uri http://www.deepwatercreations.com
+# @cbind  gh  = uri http://www.deepwatercreations.com
 
 # New window binds
 @cbind  gw  = event REQ_NEW_WINDOW
@@ -468,6 +471,6 @@ sync_spawn_exec @scripts_dir/load_cookies.sh
 sync_spawn_exec @scripts_dir/load_cookies.sh @data_home/uzbl/session-cookies.txt
 
 # Set the "home" page.
-set uri = uzbl.org/doesitwork/@COMMIT
+set uri = http://www.deepwatercreations.com
 
 # vim: set fdm=syntax:
