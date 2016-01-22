@@ -50,6 +50,12 @@ Plugin 'gitv'
 " Personal wiki
 Plugin 'vimwiki'
 
+" Easy brackets and HTML tags around things
+Plugin 'tpope/vim-surround'
+
+" Syntax error highlighting
+Plugin 'scrooloose/syntastic'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
@@ -75,6 +81,10 @@ set noshowmode
 set laststatus=2
 " Lightline general configuration
 let g:lightline = {
+\	'active': {
+\		'left': [ [ 'mode', 'paste' ], ['fugitive', 'filename', 'modified']],
+\		'right': [ ['syntastic', 'lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype' ]]
+\	},
 \	'component': {
 \		'readonly': '%{&readonly?"":""}',
 \		'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
@@ -82,10 +92,47 @@ let g:lightline = {
 \	'component_visible_condition': {
 \		'fugitive': '(exists("*fugitive#head")&&""!=fugitive#head())'
 \	},
+\	'component_expand': {
+\		'syntastic': 'SyntasticStatuslineFlag',
+\	}, 
+\	'component_type': {
+\		'syntastic': 'error',
+\	},
 \	'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
 \	'subseparator': {'left': "\ue0b1", 'right': "\ue0b3"} 
 \}
+" Lightline's help tells me this stuff is useful for Syntastic integration?
+" Not totally sure what's going on here, or if I want to add more than just 
+" *.c and *.cpp filetypes.
+let g:syntastic_mode_map = {'mode': 'passive'}
+augroup AutoSyntastic
+	autocmd!
+	autocmd BufWritePost *.c,*.cpp,*.py,*.java call s:syntastic()
+augroup END
+function! s:syntastic()
+	SyntasticCheck
+	call lightline#update()
+endfunction
 
+" Syntastic Settings:
+" Add statusline info (does this work with lightline?)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" Enable error signs in the sign column that I may or may not have
+let g:syntactic_enable_signs = 1 
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ["python", "pylint2"]
+let g:syntastic_python_python_exec = '/usr/bin/python2'
+
+let g:syntastic_mode_map = {
+\       "mode": "active"
+\   }
 
 " Turn on omnicompletion
 set omnifunc=syntaxcomplete#Complete
