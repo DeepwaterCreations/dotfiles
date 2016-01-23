@@ -146,3 +146,8 @@ noremap <C-l> <C-W>l
 
 " Put backup files in a specific directory so they don't cause clutter:
 set backupdir=~/.vim/tmp,.
+
+" Turn off relative line numbers in insert mode.
+set relativenumber
+au InsertEnter * :set norelativenumber
+au InsertLeave * :set relativenumber
