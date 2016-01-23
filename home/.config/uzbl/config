@@ -50,11 +50,11 @@ set download_handler    = sync_spawn @scripts_dir/download.sh
 
 #   What to do when a website wants to open a new window:
 # Open link in new window
-@on_event   NEW_WINDOW     sh 'uzbl-browser ${1:+-u "$1"}' %r
+#@on_event   NEW_WINDOW     sh 'uzbl-tabbed ${1:+-u "$1"}' %r
 # Open in current window (also see the REQ_NEW_WINDOW event handler below)
 #@on_event   NEW_WINDOW     uri %s
 # Open in new tab. Other options are NEW_TAB_NEXT, NEW_BG_TAB and NEW_BG_TAB_NEXT.
-#@on_event   NEW_WINDOW     event NEW_TAB %s
+@on_event   NEW_WINDOW     event NEW_TAB %s
 
 #   What to do when the user requests a new window:
 # If your the NEW_WINDOW handler opens the uri in the current window, you'll
@@ -283,7 +283,7 @@ set ebind     = @mode_bind global,-insert
 @cbind  N   = search_reverse
 
 # Print pages to a printer
-@cbind  <Ctrl>p = hardcopy
+#@cbind  <Ctrl>p = hardcopy
 
 # Web searching binds
 #@cbind  gg<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
@@ -410,8 +410,10 @@ set formfiller = spawn @scripts_dir/formfiller.sh
 # Tab navigating
 @cbind  g<              = event FIRST_TAB
 @cbind  g>              = event LAST_TAB
-@cbind  gt              = event NEXT_TAB
-@cbind  gT              = event PREV_TAB
+#@cbind  gt              = event NEXT_TAB
+@cbind  <Ctrl>n		= event NEXT_TAB
+#@cbind  gT              = event PREV_TAB
+@cbind  <Ctrl>p		= event PREV_TAB
 @cbind  gi<index:>_     = event GOTO_TAB %s
 
 # Preset loading
