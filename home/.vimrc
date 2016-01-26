@@ -56,6 +56,15 @@ Plugin 'tpope/vim-surround'
 " Syntax error highlighting
 Plugin 'scrooloose/syntastic'
 
+" Fuzzy-finder
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Commenting out lines of code
+Plugin 'tpope/vim-commentary'
+
+" Auto-generate ctags files
+Plugin 'craigemery/vim-autotag'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
@@ -71,8 +80,12 @@ let g:miniBufExplCycleArround = 1
 " Ctrl-Tab and Ctrl-Shift-Tab switch buffers:
 "noremap <C-TAB>   :MBEbn<CR> I'd like to do this, but it turns out Ctrl-Tab
 "noremap <C-S-TAB> :MBEbp<CR> isn't a key combo Vim can distinguish.
-noremap <C-N> :MBEbn<CR>
-noremap <C-P> :MBEbp<CR>
+"noremap <C-N> :MBEbn<CR>
+"noremap <C-P> :MBEbp<CR>
+
+" CtrlP Settings:
+" Start searching in open buffers, not files:
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " Lightline Settings:
 " Hide the default Vim status, since Lightline makes it redundant. 
