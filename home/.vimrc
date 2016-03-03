@@ -160,6 +160,9 @@ let g:syntastic_mode_map = {
 \       "mode": "active"
 \   }
 
+" Rainbow Settings:
+let g:rainbow_active = 1
+
 " Turn on omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
