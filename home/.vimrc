@@ -5,6 +5,7 @@ set history=256	"256 lines of command line history
 set hidden		"Open multiple files without closing the old ones
 set nowrap		"Line wrapping off
 set number		"Show line numbers
+"set showmatch           "Highlight matching braces
 
 syntax on		"Syntax highlighting
 set t_Co=256	"256 colors
