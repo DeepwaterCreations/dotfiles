@@ -68,6 +68,9 @@ Plugin 'tpope/vim-commentary'
 " This plugin is broken: It writes warning messages in stupid places on the
 " screen and ruins all my formatting.
 
+" Match parens & brackets
+Plugin 'luochen1990/rainbow'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
