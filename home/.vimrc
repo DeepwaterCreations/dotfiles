@@ -104,6 +104,10 @@ let g:lightline = {
 \		'left': [ [ 'mode', 'paste' ], ['fugitive', 'filename', 'modified']],
 \		'right': [ ['syntastic', 'lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype' ]]
 \	},
+\	'inactive': {
+\		'left': [['filename', 'modified']], 
+\		'right': [['lineinfo'], ['percent']], 
+\	},
 \	'component': {
 \		'readonly': '%{&readonly?"":""}',
 \		'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
