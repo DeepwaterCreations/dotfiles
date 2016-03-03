@@ -78,7 +78,7 @@ filetype plugin indent on "File type detection + filetype-specific tab behavior.
 
 " GuiColorScheme Settings:
 runtime! plugin/guicolorscheme.vim
-GuiColorScheme oceandeep
+GuiColorScheme oceanblack
 
 " MiniBufExpl Settings:
 " Wrap buffer movement
