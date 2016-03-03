@@ -64,7 +64,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 
 " Auto-generate ctags files
-Plugin 'craigemery/vim-autotag'
+" Plugin 'AutoTag'
+" This plugin is broken: It writes warning messages in stupid places on the
+" screen and ruins all my formatting.
 
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
