@@ -130,7 +130,7 @@ let g:lightline = {
 let g:syntastic_mode_map = {'mode': 'passive'}
 augroup AutoSyntastic
 	autocmd!
-	autocmd BufWritePost *.c,*.cpp,*.py,*.java call s:syntastic()
+	autocmd BufWritePost *.c,*.cpp,*.py,*.java,*.js call s:syntastic()
 augroup END
 function! s:syntastic()
 	SyntasticCheck
@@ -152,6 +152,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ["python", "pylint2"]
 let g:syntastic_python_python_exec = '/usr/bin/python2'
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 let g:syntastic_mode_map = {
 \       "mode": "active"
