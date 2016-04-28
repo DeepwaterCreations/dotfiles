@@ -71,6 +71,12 @@ Plugin 'tpope/vim-commentary'
 " Match parens & brackets
 Plugin 'luochen1990/rainbow'
 
+" Delete and paste from register in one go
+Plugin 'ReplaceWithRegister'
+
+" Plugins work nicely with .
+Plugin 'tpope/vim-repeat'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
