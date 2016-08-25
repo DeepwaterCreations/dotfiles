@@ -78,6 +78,9 @@ Plugin 'ReplaceWithRegister'
 " Plugins work nicely with .
 Plugin 'tpope/vim-repeat'
 
+" Edits show up immediately in browser
+Plugin 'jaxbot/browserlink.vim'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
