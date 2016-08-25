@@ -6,6 +6,7 @@ set hidden		"Open multiple files without closing the old ones
 set nowrap		"Line wrapping off
 set number		"Show line numbers
 "set showmatch           "Highlight matching braces
+set wildmode=longest,list  "Autocompletion double-press shows all matches
 
 syntax on		"Syntax highlighting
 set t_Co=256	"256 colors
