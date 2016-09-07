@@ -1,0 +1,8 @@
+OPTIONS=hilite_pet
+OPTIONS=hilite_pile
+OPTIONS=menucolors
+OPTIONS=showexp
+OPTIONS=standout
+OPTIONS=statushilites
+OPTIONS=color
+
