@@ -84,6 +84,9 @@ Plugin 'jaxbot/browserlink.vim'
 " Sensible folding in Python files
 Plugin 'tmhedberg/SimpylFold'
 
+" Make the built-in file explorer better
+Plugin 'tpope/vim-vinegar'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
