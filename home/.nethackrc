@@ -1,8 +1,13 @@
-OPTIONS=hilite_pet
-OPTIONS=hilite_pile
-OPTIONS=menucolors
-OPTIONS=showexp
-OPTIONS=standout
-OPTIONS=statushilites
-OPTIONS=color
+OPTIONS=hilite_pet, hilite_pile, showexp, standout, color, number_pad:1
+OPTIONS=lit_corridor
 
+OPTIONS=autopickup, pickup_types:$?!, pickup_burden:unencumbered, pickup_thrown
+
+OPTIONS=statushilites
+
+OPTIONS=menucolors
+MENUCOLOR="cursed"=brown
+MENUCOLOR="unholy"=brown
+MENUCOLOR="blessed"=lightcyan
+MENUCOLOR="holy"=lightcyan
+MENUCOLOR="uncursed"=gray
