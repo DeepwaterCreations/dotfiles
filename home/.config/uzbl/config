@@ -316,15 +316,15 @@ set history_disable_easter_egg 1
 @cbind  <Ctrl>p = hardcopy page
 
 # Web searching binds
-#@cbind  gg<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
-@cbind  ddg<DuckDuckGo:>_    = uri https://duckduckgo.com/?q=%s
+#@cbind  gg<Google:>_ = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
+@cbind  ddg<DuckDuckGo:>_ = uri https://duckduckgo.com/?q=\@<encodeURIComponent(%r)>\@
 #@cbind  \\awiki<Archwiki:>_  = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  !arch<Archwiki:>_  = uri https://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
+@cbind  !arch<Archwiki:>_ = uri https://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
 #@cbind  \\wiki<Wikipedia:>_  = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
 @cbind  !w<Wikipedia:>_  = uri https://en.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
-@cbind  !gi<Google Image:>_         = uri https://www.google.com/search?tbm=isch&q=\@<encodeURIComponent(%r)>\@&tbs=imgo:1
+@cbind  !gi<Google Image:>_ = uri https://www.google.com/search?tbm=isch&q=\@<encodeURIComponent(%r)>\@&tbs=imgo:1
 @cbind  !yt<YouTube:>_ = uri https://www.youtube.com/results?search_query=\@<encodeURIComponent(%r)>\@
-@cbind  !gh<GitHub:>_   = uri https://github.com/search?q=\@<encodeURIComponent(%r)>\@
+@cbind  !gh<GitHub:>_  = uri https://github.com/search?q=\@<encodeURIComponent(%r)>\@
 
 # Handy binds
 # Set function shortcut
