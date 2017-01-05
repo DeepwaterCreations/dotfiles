@@ -19,6 +19,10 @@ nnoremap : ;
 nnoremap ' `
 nnoremap ` '
 
+" Install built-in matchit plugin
+" to expand what % can match/jump to
+packadd! matchit
+
 " Set the runtime path to include Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
