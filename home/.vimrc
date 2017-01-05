@@ -14,6 +14,10 @@ set t_Co=256	"256 colors
 "Swap ; and : commands to save a couple of keystrokes:
 nnoremap ; :
 nnoremap : ;
+"Also swap ' and `, since ` is harder to reach and I can't think of
+"many situations where I would want to NOT hit the exact column of the mark.
+nnoremap ' `
+nnoremap ` '
 
 " Set the runtime path to include Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
