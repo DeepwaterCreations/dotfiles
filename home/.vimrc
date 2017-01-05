@@ -182,6 +182,10 @@ let g:syntastic_mode_map = {
 " Rainbow Settings:
 let g:rainbow_active = 1
 
+" Vimtex Settings:
+let g:vimtex_view_general_viewer = 'apvlv'
+let g:vimtex_view_general_options = '@pdf'
+
 " Turn on omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
