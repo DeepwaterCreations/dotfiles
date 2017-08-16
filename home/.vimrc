@@ -103,6 +103,9 @@ Plugin 'tpope/vim-vinegar'
 " LaTeX
 Plugin 'lervag/vimtex'
 
+" Run shell commands asynchronously
+Plugin 'skywind3000/asyncrun.vim'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
