@@ -1,3 +1,6 @@
+
+" VIM SETTINGS: {{{
+
 set nocompatible
 filetype off "Vundle wants this. It gets re-enabled below the vundle plugin block.
 
@@ -14,6 +17,20 @@ set incsearch "Show search match while still typing
 syntax on		"Syntax highlighting
 set t_Co=256	"256 colors
 
+" Turn on omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
+" Put backup files in a specific directory so they don't cause clutter:
+set backupdir=~/.vim/tmp,.
+
+" Turn off relative line numbers in insert mode.
+set relativenumber
+au InsertEnter * :set norelativenumber
+au InsertLeave * :set relativenumber
+" }}}
+
+" KEYBINDINGS: {{{
+
 "Swap ; and : commands to save a couple of keystrokes:
 nnoremap ; :
 nnoremap : ;
@@ -23,6 +40,15 @@ nnoremap ' `
 nnoremap ` '
 "Select the result of the last Insert-mode typing:
 nnoremap gV `[v`]h
+
+" Ctrl-hjkl navigates windows
+noremap <C-h> <C-W>h
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-l> <C-W>l
+" }}}
+
+" PLUGINS: {{{
 
 " Install built-in matchit plugin
 " to expand what % can match/jump to
@@ -110,12 +136,15 @@ Plugin 'skywind3000/asyncrun.vim'
 " vim +PluginInstall +qall
 call vundle#end() 
 filetype plugin indent on "File type detection + filetype-specific tab behavior. Re-enabling now that Vundle's done doing its thing.
+" }}}
 
-" GuiColorScheme Settings:
+" PLUGIN SETTINGS: {{{
+" GuiColorScheme Settings: {{{
 runtime! plugin/guicolorscheme.vim
-GuiColorScheme oceanblack
+GuiColorScheme oceanblack256
+" }}}
 
-" MiniBufExpl Settings:
+" MiniBufExpl Settings: {{{
 " Wrap buffer movement
 let g:miniBufExplCycleArround = 1
 " Ctrl-Tab and Ctrl-Shift-Tab switch buffers:
@@ -123,12 +152,14 @@ let g:miniBufExplCycleArround = 1
 "noremap <C-S-TAB> :MBEbp<CR> isn't a key combo Vim can distinguish.
 "noremap <C-N> :MBEbn<CR>
 "noremap <C-P> :MBEbp<CR>
+" }}}
 
-" CtrlP Settings:
+" CtrlP Settings: {{{
 " Start searching in open buffers, not files:
 let g:ctrlp_cmd = 'CtrlPBuffer'
+" }}}
 
-" Lightline Settings:
+" Lightline Settings: {{{
 " Hide the default Vim status, since Lightline makes it redundant. 
 set noshowmode
 " This will ensure the status line displays with only one window.
@@ -171,8 +202,9 @@ function! s:syntastic()
 	SyntasticCheck
 	call lightline#update()
 endfunction
+" }}}
 
-" Syntastic Settings:
+" Syntastic Settings: {{{
 " Add statusline info (does this work with lightline?)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -194,28 +226,16 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:syntastic_mode_map = {
 \       "mode": "active"
 \   }
+" }}}
 
-" Rainbow Settings:
+" Rainbow Settings: {{{
 let g:rainbow_active = 1
+" }}}
 
-" Vimtex Settings:
+" Vimtex Settings: {{{
 let g:vimtex_view_general_viewer = 'apvlv'
 let g:vimtex_view_general_options = '@pdf'
+" }}}
+" }}}
 
-" Turn on omnicompletion
-set omnifunc=syntaxcomplete#Complete
-
-" Other Keybindings:
-" Ctrl-hjkl navigates windows
-noremap <C-h> <C-W>h
-noremap <C-j> <C-W>j
-noremap <C-k> <C-W>k
-noremap <C-l> <C-W>l
-
-" Put backup files in a specific directory so they don't cause clutter:
-set backupdir=~/.vim/tmp,.
-
-" Turn off relative line numbers in insert mode.
-set relativenumber
-au InsertEnter * :set norelativenumber
-au InsertLeave * :set relativenumber
+" vim:foldmethod=marker:foldlevel=0
