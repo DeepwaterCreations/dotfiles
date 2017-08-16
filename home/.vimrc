@@ -7,6 +7,9 @@ set nowrap		"Line wrapping off
 set number		"Show line numbers
 "set showmatch           "Highlight matching braces
 set wildmode=longest,list  "Autocompletion double-press shows all matches
+set lazyredraw "Prevent unnecessary screen redraws
+
+set incsearch "Show search match while still typing
 
 syntax on		"Syntax highlighting
 set t_Co=256	"256 colors
