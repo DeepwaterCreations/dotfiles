@@ -132,6 +132,9 @@ Plugin 'lervag/vimtex'
 " Run shell commands asynchronously
 Plugin 'skywind3000/asyncrun.vim'
 
+" Color preview highlighting for CSS
+Plugin 'ap/vim-css-color'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
