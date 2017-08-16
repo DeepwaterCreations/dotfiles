@@ -21,6 +21,8 @@ nnoremap : ;
 "many situations where I would want to NOT hit the exact column of the mark.
 nnoremap ' `
 nnoremap ` '
+"Select the result of the last Insert-mode typing:
+nnoremap gV `[v`]h
 
 " Install built-in matchit plugin
 " to expand what % can match/jump to
