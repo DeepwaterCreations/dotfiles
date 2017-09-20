@@ -79,7 +79,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'guicolorscheme.vim'
 
 " Tabbed buffers
-Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'fholgado/minibufexpl.vim'
 
 " Fancy statusbar
 Plugin 'itchyny/lightline.vim'
@@ -145,16 +145,6 @@ filetype plugin indent on "File type detection + filetype-specific tab behavior.
 " GuiColorScheme Settings: {{{
 runtime! plugin/guicolorscheme.vim
 GuiColorScheme oceanblack256
-" }}}
-
-" MiniBufExpl Settings: {{{
-" Wrap buffer movement
-let g:miniBufExplCycleArround = 1
-" Ctrl-Tab and Ctrl-Shift-Tab switch buffers:
-"noremap <C-TAB>   :MBEbn<CR> I'd like to do this, but it turns out Ctrl-Tab
-"noremap <C-S-TAB> :MBEbp<CR> isn't a key combo Vim can distinguish.
-"noremap <C-N> :MBEbn<CR>
-"noremap <C-P> :MBEbp<CR>
 " }}}
 
 " CtrlP Settings: {{{
