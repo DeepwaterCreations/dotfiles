@@ -135,6 +135,9 @@ Plugin 'skywind3000/asyncrun.vim'
 " Color preview highlighting for CSS
 Plugin 'ap/vim-css-color'
 
+" Handy UNIX filesystem commands
+Plugin 'tpope/vim-eunuch'
+
 " Once the plugins are listed, do :PluginInstall or, from outside vim, 
 " vim +PluginInstall +qall
 call vundle#end() 
